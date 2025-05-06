@@ -3,62 +3,63 @@
 
 class Calculator
 {
-	public:
-		double num1, num2;
-		Calculator ()
+private:
+	double num1, num2;
+public:		
+	Calculator ()
+	{
+		num1 = 0;
+		num2 = 0;
+	};
+	double add()
+	{
+		return num1 + num2;
+	}
+	double multiply()
+	{
+		return num1 * num2;
+	}
+	double subtract_1_2()
+	{
+		return num2 - num1;
+	}
+	double subtract_2_1()
+	{
+		return num1 - num2;
+	}
+	double divide_1_2()
+	{
+		return num1 / num2;
+	}
+	double divide_2_1()
+	{
+		return num2 / num1;
+	}
+	bool set_num1(double num1)
+	{
+		if (num1 != 0)
 		{
-			num1 = 0;
-			num2 = 0;
-		};
-		double add()
-		{
-			return num1 + num2;
+			this->num1 = num1;
+			return true;
 		}
-		double multiply()
+		else return false;
+	}
+	bool set_num2(double num2)
+	{
+		if (num2 != 0)
 		{
-			return num1 * num2;
+			this->num2 = num2;
+			return true;
 		}
-		double subtract_1_2()
-		{
-			return num2 - num1;
-		}
-		double subtract_2_1()
-		{
-			return num1 - num2;
-		}
-		double divide_1_2()
-		{
-			return num1 / num2;
-		}
-		double divide_2_1()
-		{
-			return num2 / num1;
-		}
-		bool set_num1(double num1)
-		{
-			if (num1 != 0)
-			{
-				this->num1 = num1;
-				return true;
-			}
-			else return false;
-		}
-		bool set_num2(double num2)
-		{
-			if (num2 != 0)
-			{
-				this->num2 = num2;
-				return true;
-			}
-			else return false;
-		}
+		else return false;
+	}
 };
 int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	double num1, num2;
-	Calculator Calc;
+	Calculator Calc;	
 	while (true)
 	{
 		while (true)
